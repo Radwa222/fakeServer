@@ -3,7 +3,7 @@ const app = express()
 app.use(express.json())
 
 
-app.get('/chats',  (req, res)=> {
+app.post('/chats',  (req, res)=> {
     
     try{
         
@@ -23,6 +23,6 @@ app.get('/chats',  (req, res)=> {
 
     }  
   })
-   
-  app.listen(3000)
+   let port= process.env.PORT ||3000
+  app.listen(port)
 
